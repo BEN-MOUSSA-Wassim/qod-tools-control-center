@@ -1,0 +1,199 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Centre de contrôle public de QoD Tools : 14 contrôles qualité SIG, reporting et lancement sécurisé de l'application Windows locale.">
+  <meta name="theme-color" content="#10233d">
+  <title>QoD Tools — Centre de contrôle</title>
+  <link rel="canonical" href="https://ben-moussa-wassim.github.io/qod-tools-control-center/">
+  <meta property="og:title" content="QoD Tools — Centre de contrôle">
+  <meta property="og:description" content="Découvrez les 14 contrôles qualité SIG de QoD Tools et ouvrez l'application Windows locale via une passerelle configurable.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://ben-moussa-wassim.github.io/qod-tools-control-center/">
+  <meta property="og:image" content="https://ben-moussa-wassim.github.io/qod-tools-control-center/assets/accueil-qod-tools.png">
+  <link rel="icon" href="assets/qod-tools.ico">
+  <link rel="manifest" href="site.webmanifest">
+  <link rel="stylesheet" href="styles.css?v=20261111">
+</head>
+<body>
+  <a class="skip-link" href="#main">Aller au contenu</a>
+
+  <header class="topbar">
+    <a class="brand" href="#accueil" aria-label="QoD Tools, accueil">
+      <span class="brand-mark" aria-hidden="true">QD</span>
+      <span><strong>QoD Tools</strong><small>Centre de contrôle local</small></span>
+    </a>
+    <div class="topbar-actions">
+      <span class="privacy-pill"><span class="privacy-dot"></span>Portail public · exécution locale</span>
+      <button class="button button-primary launch-app" type="button">
+        <svg aria-hidden="true" viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
+        Ouvrir QoD Tools
+      </button>
+    </div>
+  </header>
+
+  <main id="main">
+    <section class="hero" id="accueil">
+      <div class="hero-copy">
+        <p class="eyebrow">Contrôles qualité SIG • Windows</p>
+        <h1>Pilotez vos contrôles QoD depuis un espace clair et sécurisé.</h1>
+        <p class="hero-lead">Retrouvez les 14 traitements de votre application locale, préparez votre projet puis ouvrez QoD Tools en un clic. Vos couches SIG restent sur ce poste.</p>
+        <div class="hero-actions">
+          <button class="button button-primary button-large launch-app" type="button">
+            <svg aria-hidden="true" viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
+            Lancer l’application locale
+          </button>
+          <a class="button button-secondary" href="#outils">Voir les contrôles</a>
+        </div>
+        <div class="trust-row" aria-label="Garanties principales">
+          <span><svg aria-hidden="true" viewBox="0 0 24 24"><path d="M12 2 4 5v6c0 5.1 3.4 9.4 8 11 4.6-1.6 8-5.9 8-11V5zm-1 14-4-4 1.4-1.4 2.6 2.6 5.6-5.6L18 9z"/></svg>Traitements locaux</span>
+          <span><svg aria-hidden="true" viewBox="0 0 24 24"><path d="M3 5h18v14H3zm2 2v10h14V7zm2 2h5v2H7zm0 4h10v2H7z"/></svg>Sources protégées</span>
+          <span><svg aria-hidden="true" viewBox="0 0 24 24"><path d="M12 2a10 10 0 1 0 0 20 10 10 0 0 0 0-20m1 15h-2v-6h2zm0-8h-2V7h2z"/></svg>Réseau sur consentement</span>
+        </div>
+      </div>
+      <div class="hero-visual" aria-label="Aperçu de l'application QoD Tools">
+        <div class="window-chrome"><i></i><i></i><i></i><span>QoD Tools — Contrôles qualité SIG</span></div>
+        <img src="assets/accueil-qod-tools.png" alt="Écran d’accueil de l’application QoD Tools">
+        <div class="hero-float-card">
+          <span class="hero-float-icon">✓</span>
+          <span><strong>14 contrôles</strong><small>Catalogue local vérifié</small></span>
+        </div>
+      </div>
+    </section>
+
+    <section class="status-strip" aria-label="État de l'environnement">
+      <div><span class="status-icon success">✓</span><span><strong>Application locale requise</strong><small>Windows · installation séparée</small></span></div>
+      <div><span class="status-icon">⌂</span><span><strong>Passerelle qodtools://</strong><small class="truncate">À configurer sur chaque poste</small></span></div>
+      <div><span class="status-icon">14</span><span><strong>Catalogue chargé</strong><small>7 domaines métier</small></span></div>
+      <button id="open-install-guide" class="text-button" type="button">Voir le guide</button>
+    </section>
+
+    <section class="section" id="outils">
+      <div class="section-heading">
+        <div>
+          <p class="eyebrow">Catalogue métier</p>
+          <h2>Trouvez le bon contrôle</h2>
+          <p>Recherchez par couche, anomalie ou résultat attendu. Le traitement s’exécute toujours dans l’application locale.</p>
+        </div>
+        <div class="catalog-count"><strong id="visible-count">14</strong><span>outils affichés</span></div>
+      </div>
+
+      <div class="catalog-toolbar">
+        <label class="search-field">
+          <svg aria-hidden="true" viewBox="0 0 24 24"><path d="m21 20-4.4-4.4a8 8 0 1 0-1 1L20 21zM5 11a6 6 0 1 1 12 0 6 6 0 0 1-12 0"/></svg>
+          <span class="sr-only">Rechercher un contrôle</span>
+          <input id="tool-search" type="search" placeholder="Rechercher un contrôle…" autocomplete="off">
+        </label>
+        <div class="filter-pills" id="category-filters" aria-label="Filtrer par catégorie"></div>
+      </div>
+
+      <div class="tools-grid" id="tools-grid" aria-live="polite"></div>
+      <div class="empty-state" id="empty-state" hidden>
+        <span>⌕</span>
+        <h3>Aucun contrôle trouvé</h3>
+        <p>Essayez un autre terme ou revenez à toutes les catégories.</p>
+        <button class="button button-secondary" id="reset-filters" type="button">Réinitialiser</button>
+      </div>
+    </section>
+
+    <section class="section workflow-section" id="parcours">
+      <div class="section-heading compact">
+        <div>
+          <p class="eyebrow">Parcours recommandé</p>
+          <h2>Du dossier projet au livrable</h2>
+        </div>
+      </div>
+      <ol class="workflow-steps">
+        <li><span>01</span><div><h3>Préparer le projet</h3><p>Regroupez vos Shapefiles ou GeoPackages et leurs fichiers associés dans un dossier accessible.</p></div></li>
+        <li><span>02</span><div><h3>Ouvrir QoD Tools</h3><p>Lancez l’application depuis ce portail puis utilisez <strong>Choisir le dossier</strong>.</p></div></li>
+        <li><span>03</span><div><h3>Exécuter un contrôle</h3><p>Sélectionnez un outil, vérifiez ses entrées et cliquez sur <strong>Lancer le traitement</strong>.</p></div></li>
+        <li><span>04</span><div><h3>Analyser les résultats</h3><p>Consultez le récapitulatif, le journal ou chargez vos CSV dans <strong>Reporting</strong>.</p></div></li>
+      </ol>
+      <div class="workflow-actions">
+        <button class="button button-primary launch-app" type="button">Commencer dans QoD Tools</button>
+        <button class="button button-ghost" id="show-bridge-help" type="button">Aide au lancement</button>
+      </div>
+    </section>
+
+    <section class="section features-section" id="fonctions">
+      <div class="section-heading">
+        <div>
+          <p class="eyebrow">Au-delà des contrôles</p>
+          <h2>Un environnement complet pour la qualité SIG</h2>
+        </div>
+      </div>
+      <div class="feature-layout">
+        <button class="feature-copy is-active" data-preview="reporting" type="button" aria-pressed="true">
+          <span class="feature-number">01</span>
+          <div><h3>Reporting CSV</h3><p>Comparez plusieurs livrables, filtrez les anomalies et exportez une vue sans modifier les sources.</p></div>
+        </button>
+        <button class="feature-copy" data-preview="filtering" type="button" aria-pressed="false">
+          <span class="feature-number">02</span>
+          <div><h3>Filtrage des anomalies</h3><p>Isolez rapidement les erreurs utiles et préparez une vue de contrôle lisible sans toucher aux données sources.</p></div>
+        </button>
+        <button class="feature-copy" data-preview="tracabilite" type="button" aria-pressed="false">
+          <span class="feature-number">03</span>
+          <div><h3>Traçabilité technique</h3><p>Chaque exécution produit un manifeste avec version, statut, durée et empreintes des fichiers.</p></div>
+        </button>
+        <div class="feature-preview">
+          <img id="feature-image" src="assets/reporting-qod-tools.png" alt="Écran Reporting de QoD Tools">
+          <div class="preview-caption"><span id="preview-kicker">REPORTING</span><strong id="preview-title">Lisez vos livrables en un coup d’œil</strong></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section bridge-section" id="connexion">
+      <div class="bridge-copy">
+        <p class="eyebrow light">Connexion Windows</p>
+        <h2>Le site ouvre l’application, vos données restent locales.</h2>
+        <p>Le lien de lancement utilise une passerelle Windows limitée au protocole <code>qodtools://</code>. Il ne donne au site aucun accès à vos fichiers et ne lance aucun traitement sans votre action dans l’application.</p>
+        <div class="bridge-actions">
+          <button class="button button-light launch-app" type="button">Tester l’ouverture</button>
+          <a class="button button-outline-light" href="downloads/qodtools-protocol.example.reg.txt" download>Télécharger le modèle</a>
+        </div>
+      </div>
+      <div class="bridge-card">
+        <div class="bridge-card-head"><span>QD</span><div><strong>QoD Tools local</strong><small>Connexion à la demande</small></div><i></i></div>
+        <ul>
+          <li><span>✓</span>Ouvre uniquement l’exécutable connu</li>
+          <li><span>✓</span>Aucune donnée SIG dans le navigateur</li>
+          <li><span>✓</span>Désinstallation en un double-clic</li>
+        </ul>
+        <a href="https://github.com/BEN-MOUSSA-Wassim/qod-tools-control-center#connexion-locale" target="_blank" rel="noopener noreferrer">Guide de connexion locale</a>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="brand footer-brand"><span class="brand-mark">QD</span><span><strong>QoD Tools</strong><small>Contrôles qualité SIG</small></span></div>
+    <p>Portail public lié à une application locale — aucune couche SIG n’est téléversée.</p>
+    <div><a href="#outils">Contrôles</a><a href="#parcours">Parcours</a><a href="#connexion">Connexion</a></div>
+  </footer>
+
+  <dialog id="tool-dialog" aria-labelledby="dialog-title">
+    <button class="dialog-close" type="button" aria-label="Fermer">×</button>
+    <span class="dialog-category" id="dialog-category"></span>
+    <h2 id="dialog-title"></h2>
+    <p id="dialog-description"></p>
+    <div class="dialog-safety" id="dialog-safety"></div>
+    <div class="dialog-note"><strong>Dans l’application</strong><span>Ouvrez la rubrique indiquée, vérifiez les entrées détectées puis lancez le traitement.</span></div>
+    <button class="button button-primary button-large launch-app" type="button">Ouvrir QoD Tools</button>
+  </dialog>
+
+  <dialog id="bridge-dialog" aria-labelledby="bridge-dialog-title">
+    <button class="dialog-close" type="button" aria-label="Fermer">×</button>
+    <span class="dialog-category">PREMIÈRE UTILISATION</span>
+    <h2 id="bridge-dialog-title">Autoriser le lancement local</h2>
+    <ol class="bridge-help-steps">
+      <li><span>1</span><p>Installez QoD Tools sur votre poste Windows et repérez le chemin de <code>QoD_Tools.exe</code>.</p></li>
+      <li><span>2</span><p><a href="downloads/qodtools-protocol.example.reg.txt" download>Téléchargez le modèle de passerelle</a>, remplacez le chemin d’exemple, puis enregistrez-le en fichier <code>.reg</code>.</p></li>
+      <li><span>3</span><p>Ouvrez le fichier adapté, revenez ici et cliquez sur <strong>Ouvrir QoD Tools</strong>.</p></li>
+    </ol>
+    <p class="fine-print">Le modèle public ne contient aucun chemin personnel. La passerelle doit pointer exclusivement vers l’exécutable QoD Tools choisi sur votre poste.</p>
+  </dialog>
+
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+  <script src="app.js?v=20261111"></script>
+</body>
+</html>

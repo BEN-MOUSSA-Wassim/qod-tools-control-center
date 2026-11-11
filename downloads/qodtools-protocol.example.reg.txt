@@ -1,0 +1,15 @@
+Windows Registry Editor Version 5.00
+
+[HKEY_CURRENT_USER\Software\Classes\qodtools]
+@="URL:QoD Tools Local Protocol"
+"URL Protocol"=""
+
+[HKEY_CURRENT_USER\Software\Classes\qodtools\DefaultIcon]
+@="C:\\PATH\\TO\\QoD_Tools.exe,0"
+
+[HKEY_CURRENT_USER\Software\Classes\qodtools\shell]
+
+[HKEY_CURRENT_USER\Software\Classes\qodtools\shell\open]
+
+[HKEY_CURRENT_USER\Software\Classes\qodtools\shell\open\command]
+@="\"C:\\PATH\\TO\\QoD_Tools.exe\" \"%1\""
