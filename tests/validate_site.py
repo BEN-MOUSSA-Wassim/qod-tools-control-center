@@ -64,6 +64,9 @@ def main() -> None:
     missing_fragments = sorted({fragment for fragment in parser.fragments if fragment and fragment not in parser.ids})
     private_markers = [marker for marker in ("IOFWASSIM", "Site privé", "Portail privé") if marker in html + script + readme]
     tool_count = len(re.findall(r'\{ id: "[^"]+"', script))
+    bilingual_tool_count = len(re.findall(r'^\s*\{ id: .*title: \{ fr: "[^"]+", en: "[^"]+" \}', script, re.MULTILINE))
+    i18n_keys = set(re.findall(r'data-i18n(?:-html|-placeholder|-aria-label|-alt)?="([^"]+)"', html))
+    missing_i18n_keys = sorted(key for key in i18n_keys if f"    {key}:" not in script)
 
     assert parser.canonical == EXPECTED_CANONICAL, parser.canonical
     assert not missing, f"Missing local assets: {missing}"
@@ -72,12 +75,16 @@ def main() -> None:
     assert not parser.unsafe_blank_links, f"Unsafe target=_blank links: {parser.unsafe_blank_links}"
     assert not private_markers, f"Private markers remain: {private_markers}"
     assert tool_count == 14, f"Expected 14 tools, found {tool_count}"
+    assert bilingual_tool_count == 14, f"Expected 14 bilingual tools, found {bilingual_tool_count}"
+    assert html.count('data-language="') == 2, "FR/EN language controls are missing"
+    assert not missing_i18n_keys, f"Missing translation keys: {missing_i18n_keys}"
+    assert "qod-tools-language" in script, "Language preference is not persisted"
     assert "aria-pressed" in script, "Interactive filter state is not exposed"
     assert (ROOT / ".github/workflows/pages.yml").is_file()
     assert (ROOT / ".nojekyll").is_file()
 
-    print(f"PASS: {tool_count} tools; {len(parser.assets)} local asset references resolve")
-    print("PASS: canonical URL, fragments, alt text, public-safety markers, and link safety")
+    print(f"PASS: {tool_count} bilingual tools; {len(i18n_keys)} interface keys; {len(parser.assets)} local asset references resolve")
+    print("PASS: FR/EN switch, canonical URL, fragments, alt text, public-safety markers, and link safety")
 
 
 if __name__ == "__main__":

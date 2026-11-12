@@ -9,6 +9,7 @@ Portail web public de présentation et de lancement local de **QoD Tools**, une 
 ## Fonctionnement
 
 - Le catalogue, la recherche, les filtres et les captures fonctionnent entièrement dans le navigateur.
+- Le sélecteur **FR/EN** traduit toute l’interface et mémorise la langue choisie dans le navigateur.
 - Les traitements SIG restent dans l'application Windows locale.
 - Le bouton de lancement utilise le protocole personnalisé `qodtools://open`.
 - Aucune couche SIG, donnée client ou information de production n'est envoyée au site.
